@@ -1,0 +1,65 @@
+# SKILL: skill044_ux_ui
+# ROLE: UX/UI Lead & Mistica Specialist
+# CONTEXT: Visual Identity & Design System Governance | Status: ACCEPTED 2026-03-29
+
+## [0] METADATA (ADR)
+- Problem: Visual fragmentation and inconsistent brand representation.
+- Decision: Mandate Mistica Design System with Confianza23 visual identity.
+- Mechanism: Strict mapping of assets, colors, and icon paths.
+- Consequence: Enterprise-grade UI consistency and brand alignment.
+
+---
+
+## [1] BRAND IDENTITY (CONFIANZA23)
+- **Primary Logo**: https://www.confianza23.es/assets/images/logotipo.png
+- **Placement**: Header (Top-Left) with proportional scaling.
+- **Visual Assets Directory**: `assets/images/` 
+
+## [2] DESIGN SYSTEM (MÍSTICA)
+- **Framework**: Mistica (Telefónica Design System).
+- **Core Palette**:
+  - **Mistica Blue (Primary)**: #001935 (Headers, Surfaces, Filled Icons).
+  - **Mistica Accent (Action)**: #00a9e0 (Regular Icons, Links, CTA).
+  - **Background (Surface)**: #f0f4f8 (Light Blue-Grey).
+- **Component Strategy**: Server-side rendering (HTMX) or Next.js React Server Components.
+
+## [3] ICONOGRAPHY GOVERNANCE (TELEFÓNICA SET)
+- **Source Repository**: https://github.com/Telefonica/mistica-icons
+- **Base Path (Regular)**: `https://raw.githubusercontent.com/Telefonica/mistica-icons/production/icons/telefonica/regular/`
+- **Base Path (Filled)**: `https://raw.githubusercontent.com/Telefonica/mistica-icons/production/icons/telefonica/filled/`
+
+### 3.1 Icon Map (Key-Value)
+- **Address-Book**: `address-book-regular.svg` / `address-book-filled.svg`
+- **Alarm**: `alarm-regular.svg` / `alarm-filled.svg`
+- **Arrow-Down**: `arrow-down-regular.svg` / `arrow-down-filled.svg`
+- **Arrow-Left**: `arrow-left-regular.svg` / `arrow-left-filled.svg`
+- **Arrow-Right**: `arrow-right-regular.svg` / `arrow-right-filled.svg`
+- **Arrow-Up**: `arrow-up-regular.svg` / `arrow-up-filled.svg`
+- **Bank**: `bank-regular.svg` / `bank-filled.svg`
+- **Basket**: `basket-regular.svg` / `basket-filled.svg`
+- **Bell**: `bell-regular.svg` / `bell-filled.svg`
+- **Calendar**: `calendar-regular.svg` / `calendar-filled.svg`
+- **Camera**: `camera-regular.svg` / `camera-filled.svg`
+- **Cart**: `cart-regular.svg` / `cart-filled.svg`
+- **Chart**: `chart-bar-regular.svg` / `chart-line-regular.svg`
+- **Check**: `check-regular.svg` / `check-filled.svg`
+- **Chevron**: `chevron-down-regular.svg` / `chevron-up-regular.svg`
+- **Clock**: `clock-regular.svg` / `clock-filled.svg`
+- **Cloud**: `cloud-regular.svg` / `cloud-filled.svg`
+- **Settings**: `cog-regular.svg` / `cog-filled.svg`
+- **Email**: `email-regular.svg` / `email-filled.svg`
+- **Home**: `home-regular.svg` / `home-filled.svg`
+- **Info**: `info-regular.svg` / `info-filled.svg`
+- **Lock**: `lock-regular.svg` / `lock-filled.svg`
+- **Menu**: `menu-regular.svg` / `menu-filled.svg`
+- **Phone**: `phone-regular.svg` / `phone-filled.svg`
+- **Search**: `search-regular.svg` / `search-filled.svg`
+- **User**: `user-regular.svg` / `user-filled.svg`
+
+## [4] IMPLEMENTATION CONSTRAINTS
+- **Icon Styling**:
+  - `Regular`: Use `stroke: #00a9e0` (stroke-width: 1.5).
+  - `Filled`: Use `fill: #001935`.
+- **Transitions**: Smooth (cubic-bezier) 0.3s.
+- **Interactions**: On-Hover `translateY(-5px)`
+- **Security**: Mandatory sanitization of HTML if using `unsafe_allow_html=True` for SVGs

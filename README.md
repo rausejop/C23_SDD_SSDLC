@@ -71,31 +71,31 @@ mindmap
 
 ## 🏗️ 3. The Skills Ecosystem (Layered Architecture)
 
-### 🌐 LAYER 0: THE ORCHESTRATOR
+### 🧠 LAYER 1: SDD (The Orchestrator)
 This layer defines the core policies of the SDD engine. It is the "Brain" that ensures all other skills are executed in the correct order and under the right constraints.
 
-*   **Skill:** [`skill000_orchestrator.txt`](./.agents/skills/skill000_orchestrator.txt)
+*   **Skill:** [`skill000_orchestrator.txt`](./skills/skill000_orchestrator.txt)
 *   **Role:** System Architect
 *   **Key Function:** Orchestrates the multi-agent workflow and resolves conflicts.
 
 ```mermaid
 graph TD
     A[User Request] --> B{Orchestrator}
-    B --> C[Layer 1: GRC Check]
-    C --> D[Layer 2: Structural Spec]
-    D --> E[Layer 3: Code Guidelines]
+    B --> C[Layer 2: GRC Check]
+    C --> D[Layer 3: Structural Spec]
+    D --> E[Layer 4: Code Guidelines]
     E --> F[Execution]
-    F --> G[Layer 5: QA Validation]
+    F --> G[Layer 6: QA Validation]
     G -- Pass --> H[Success]
     G -- Fail --> B
 ```
 
-### ⚖️ LAYER 1: GRC (Governance, Risk, & Compliance)
+### ⚖️ LAYER 2: GRC (Governance, Risk, & Compliance)
 Ensures the software is legally compliant and architecturally secure. It leverages **NIST CSF 2.0** and **ISO 27001:2022** frameworks.
 
 *   **Skills:** 
-    *   [`skill011_license.txt`](./.agents/skills/skill011_license.txt) (Legal Sentinel)
-    *   [`skill012_security.txt`](./.agents/skills/skill012_security.txt) (SecOps Guard)
+    *   [`skill011_license.txt`](./skills/skill011_license.txt) (Legal Sentinel)
+    *   [`skill012_security.txt`](./skills/skill012_security.txt) (SecOps Guard)
 
 ```mermaid
 pie title Compliance Distribution
@@ -104,21 +104,22 @@ pie title Compliance Distribution
     "Privacy (GDPR/SD-JWT)" : 25
 ```
 
-```mermaid
-radar
-    title Security Maturity Model
-    labels [Injection, Authentication, Data Integrity, Logging, Encryption]
-    data [0.9, 0.85, 0.95, 0.8, 0.9]
-```
+| Security Domain | Maturity Level |
+| :--- | :---: |
+| Injection | 0.9 |
+| Authentication | 0.85 |
+| Data Integrity | 0.95 |
+| Logging | 0.8 |
+| Encryption | 0.9 |
 
-### 🛠️ LAYER 2: STRUCT (Architecture & Core Stack)
+### 🛠️ LAYER 3: STRUCT (Architecture & Core Stack)
 Maps the physical and logical structure of the application. It defines the TRL 7 (Technology Readiness Level) path.
 
 *   **Skills:**
-    *   [`skill022_app_manifest.txt`](./.agents/skills/skill022_app_manifest.txt) (App Architect)
-    *   [`skill023_fslayout.txt`](./.agents/skills/skill023_fslayout.txt) (System Structurer)
-    *   [`skill024_tech_stack.txt`](./.agents/skills/skill024_tech_stack.txt) (Stack Specialist)
-    *   [`skill025_libraries.txt`](./.agents/skills/skill025_libraries.txt) (DevOps Dependency)
+    *   [`skill022_app_manifest.txt`](./skills/skill022_app_manifest.txt) (App Architect)
+    *   [`skill023_fslayout.txt`](./skills/skill023_fslayout.txt) (System Structurer)
+    *   [`skill024_tech_stack.txt`](./skills/skill024_tech_stack.txt) (Stack Specialist)
+    *   [`skill025_libraries.txt`](./skills/skill025_libraries.txt) (DevOps Dependency)
 
 ```mermaid
 C4Context
@@ -141,10 +142,10 @@ erDiagram
     AGENT ||--o{ ARTIFACT : produces
 ```
 
-### 💻 LAYER 3: CODE (Standards & Guidelines)
+### 💻 LAYER 4: CODE (Standards & Guidelines)
 Enforces "Senior Engineer" level code quality. Focuses on **PEP 484**, **SOLID** principles, and **Safe types**.
 
-*   **Skill:** [`skill031_python_style.txt`](./.agents/skills/skill031_python_style.txt)
+*   **Skill:** [`skill031_python_style.txt`](./skills/skill031_python_style.txt)
 *   **Role:** Senior Engineer
 
 ```mermaid
@@ -161,14 +162,13 @@ classDiagram
     BaseSkill <|-- SecuritySkill
 ```
 
-### 🏭 LAYER 4: IMPLEMENT (Development Specifics)
+### 🏭 LAYER 5: IMPLEMENT (Development Specifics)
 The actual implementation of Backend (FastAPI/Hono), Frontend (Next.js/HTMX), and Database (PostgreSQL/Prisma).
 
 *   **Skills:**
-    *   [`skill041_backend_spec.txt`](./.agents/skills/skill041_backend_spec.txt)
-    *   [`skill042_db_schema.txt`](./.agents/skills/skill042_db_schema.txt)
-    *   [`skill043_frontend_spec.txt`](./.agents/skills/skill043_frontend_spec.txt)
-    *   [`skill044_ux_ui_MISTICA.txt`](./.agents/skills/skill044_ux_ui_MISTICA.txt)
+    *   [`skill041_backend_spec.txt`](./skills/skill041_backend_spec.txt)
+    *   [`skill042_db_schema.txt`](./skills/skill042_db_schema.txt)
+    *   [`skill043_frontend_spec.txt`](./skills/skill043_frontend_spec.txt)
 
 ```mermaid
 sequenceDiagram
@@ -185,12 +185,12 @@ sequenceDiagram
     Frontend-->>User: Update View
 ```
 
-### 🧪 LAYER 5: QA & OPS
+### 🧪 LAYER 6: QA & OPS
 Focuses on testing (Pytest, Playwright) and Operating System tuning for Windows 11.
 
 *   **Skills:**
-    *   [`skill051_test_suite.txt`](./.agents/skills/skill051_test_suite.txt) (QA Lead)
-    *   [`skill052_os_tuning.txt`](./.agents/skills/skill052_os_tuning.txt) (Ops Ninja)
+    *   [`skill051_test_suite.txt`](./skills/skill051_test_suite.txt) (QA Lead)
+    *   [`skill052_os_tuning.txt`](./skills/skill052_os_tuning.txt) (Ops Ninja)
 
 ```mermaid
 gantt
@@ -205,13 +205,12 @@ gantt
     Security Audit        : 2026-03-16, 3d
 ```
 
-### 📚 LAYER 6: DOCS & DELIVERY
+### 📚 LAYER 7: DOCS
 Automates the generation of documentation and project metadata.
 
 *   **Skills:**
-    *   [`skill061_readme.txt`](./.agents/skills/skill061_readme.txt)
-    *   [`skill062_docs_engine.txt`](./.agents/skills/skill062_docs_engine.txt)
-    *   [`skills063_docs_NATO_NCIA_RFI.txt`](./.agents/skills/skills063_docs_NATO_NCIA_RFI.txt)
+    *   [`skill061_readme.txt`](./skills/skill061_readme.txt)
+    *   [`skill062_docs_engine.txt`](./skills/skill062_docs_engine.txt)
 
 ```mermaid
 gitGraph
@@ -227,18 +226,34 @@ gitGraph
     merge develop tag: "v2026.03"
 ```
 
+### 🌍 LAYER 8: DOCS_CUSTOM (Per-App Documentation)
+Custom documentation layers for specific industry standards or RFIs.
+
+*   **Feature:** Allows tailoring the documentation engine to specific organizational needs.
+*   **Skills:**
+    *   [`skill063_docs_NATO_NCIA_RFI.txt`](./skills/skill063_docs_NATO_NCIA_RFI.txt)
+    *   [`skill064_docs_NATO_UKR_UNITE_Brave1_RFI.txt`](./skills/skill064_docs_NATO_UKR_UNITE_Brave1_RFI.txt)
+
+### 🎨 LAYER 9: APP_CUSTOM (UI & Design Systems)
+Custom UI/UX layers for specific application branding and design frameworks.
+
+*   **Feature:** Switch between NATO guidelines, MISTICA (Telefónica), or custom design systems.
+*   **Skills:**
+    *   [`skill044_ux_ui_MISTICA.txt`](./skills/skill044_ux_ui_MISTICA.txt)
+    *   [`skill044_ux_ui_NATO.txt`](./skills/skill044_ux_ui_NATO.txt)
+
 ---
 
 ## 📊 4. Miscellaneous Framework Visualizations
 
 ```mermaid
-sankey-beta
-    "User Input" [100] --> "Orchestrator"
-    "Orchestrator" [30] --> "Security Layer"
-    "Orchestrator" [70] --> "Dev Layer"
-    "Security Layer" [30] --> "Passed"
-    "Dev Layer" [60] --> "Passed"
-    "Dev Layer" [10] --> "Failed/Retry"
+graph LR
+    Input["User Input (100)"] --> Orchestrator["Orchestrator"]
+    Orchestrator --> Security["Security Layer (30)"]
+    Orchestrator --> Dev["Dev Layer (70)"]
+    Security --> PassedS["Passed"]
+    Dev --> PassedD["Passed (60)"]
+    Dev --> FailedD["Failed/Retry (10)"]
 ```
 
 ```mermaid
@@ -253,16 +268,12 @@ quadrantChart
     "OS Tuning": [0.7, 0.3]
 ```
 
-```mermaid
-kanban
-  Todo
-    [ ] Integrity Check
-    [ ] License Alignment
-  In Progress
-    [x] SDD Layer Mapping
-  Done
-    [x] Framework Renaming
-```
+| Status | Task |
+| :---: | :--- |
+| [ ] | Integrity Check |
+| [ ] | License Alignment |
+| [x] | SDD Layer Mapping |
+| [x] | Framework Renaming |
 
 ```mermaid
 journey
@@ -276,23 +287,6 @@ journey
     section Validation
       QA Testing: 5: AI
       Release: 5: Developer
-```
-
-```mermaid
-xychart-beta
-    title "Performance Benchmarking (Token Efficiency)"
-    x-axis [L0, L1, L2, L3, L4, L5, L6]
-    y-axis "Efficiency %" 0 --> 100
-    line [95, 88, 85, 92, 78, 82, 90]
-```
-
-```mermaid
-packet-beta
-    title GRC Security Packet
-    0-15: "Source Port"
-    16-31: "Dest Port"
-    32-63: "Sequence Number"
-    64-95: "Acknowledgment Number"
 ```
 
 ```mermaid
@@ -312,9 +306,8 @@ requirementDiagram
 ```
 
 ```mermaid
-block-beta
-  title System Architecture Layout
-  columns 4
+flowchart TD
+  title["System Architecture Layout"]
   UI["Frontend (Next.js)"]
   API["Backend API (Hono)"]
   Logic["SDD Orchestrator"]
@@ -325,21 +318,12 @@ block-beta
 ```
 
 ```mermaid
-block-beta
-  title Skill Hierarchy Treemap (Simulated)
-  columns 8
-  L0:4 L1:2 L2:2
-  L3:3 L4:3 L5:2
-  L6:8
-```
-
-```mermaid
-zenuml
+sequenceDiagram
     title Skill Initialization
-    Orchestrator -> Layer1: Request Compliance
-    Layer1 -> SecuritySkill: Validate
-    SecuritySkill -> Layer1: Done
-    Layer1 -> Orchestrator: Approved
+    Orchestrator ->> Layer2: Request Compliance (GRC)
+    Layer2 ->> SecuritySkill: Validate
+    SecuritySkill -->> Layer2: Done
+    Layer2 -->> Orchestrator: Approved
 ```
 
 ```mermaid

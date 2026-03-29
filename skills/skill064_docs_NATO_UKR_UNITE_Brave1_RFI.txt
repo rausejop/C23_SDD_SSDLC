@@ -1,0 +1,94 @@
+# SKILL: skill064_docs_NATO_UKR_UNITE_Brave1
+# ROLE: Technical Writer & Defense Innovation Consultant
+# CONTEXT: Ukraine-NATO Innovation, Technology and Engineering (UNITE) Brave1  | tatus: ACCEPTED 2026-03-29
+# PROJECT: Counter-UAS and Air Defense Innovation Competition
+# SECURITY: UNCLASSIFIED - Distribution for UNITE Programme Participants
+
+## [0] METADATA (ADR)
+- Problem: Requirement to facilitate joint UA-NATO innovation proposals under the UNITE/Brave1 framework.
+- Decision: Standardize documentation for the "Brave NATO" competition focusing on Counter-UAS and Air Defense.
+- Mechanism: Structured mapping of eligibility, technical categories, and the 8-stage "How it Works" lifecycle.
+- Consequence: Accelerated compliance check and high-quality joint proposals aligned with NCIA and Brave1 grant requirements.
+
+---
+
+## [1] DOCUMENTATION DELIVERABLES
+- Generate formal documentation for the UNITE / Brave NATO Joint Innovation Programme.
+- Style: Professional Defense/Technical English.
+- Formatting: Markdown-based structure for project management and grant application tracking.
+- Adherence: Strict alignment with NATO Comprehensive Assistance Package (CAP) and Brave1 funding rules.
+
+---
+
+## [2] PROGRAMME STRUCTURE & ELIGIBILITY
+
+Perform automatic generation and maintenance of the following files/sections:
+
+REQ.UNITE.01 - [X] Programme Overview & Stakeholders
+          - Purpose: Define the first joint UA-NATO innovation programme.
+          - Budget: €50 mln total; €10 mln for 1st Competition.
+          - Stakeholders: NATO HQ Innovation Directorate, NCIA, and Brave1.
+
+REQ.UNITE.02 - [X] Eligibility criterias to participate(Compliance Check)
+          - [X] REQ.A.01: Legal entity registered in Ukraine or NATO jurisdictions.
+          - [X] REQ.A.02: No benefiaries or ties in Russia, Belarus, Iran.
+          - [X] REQ.A.03: No state owned companies, humanitarian organisation or individual.
+          - [X] REQ.A.04: Companies that have not received funding from Brave1 or NATO for this same Project.
+          - [X] REQ.A.05: NATO companies should provide a Declaration of Eligibility via national delegations to NATO.
+          - [X] REQ.A.06: Ukrainian companies will complete compliance check through Brave1.
+
+REQ.UNITE.03 - [X] Technical Categories (Counter-UAS & Air Defense)
+          - [ ] Active Protection Systems against FPV Drones: Non-armoured vehicles widely used on the battlefield require active protection systems capable of autonomously detecting and intercepting FPV drones while in motion.
+          - [ ] Advanced and Affordable Counter-Shahed Systems: Affordable and scalable solutions are needed to detect and neutralize Shahed-type loitering munitions threatening critical infrastructure and military facilities.
+          - [ ] Electromagnetic Support for Signals Intelligence (SIGINT): Advanced electromagnetic support systems are needed to automatically detect, classify, and geolocate airborne and ground-based emitters across a wide frequency spectrum.
+          - [ ] Electromagnetic Attack (EA) technology against FPV drones: New technologies are needed to disrupt or disable the electronics of FPV drones, including fibre-optic and autonomous systems, to protect mobile units and fixed positions.
+          - [ ] High-Altitude Platforms: High-altitude, long-endurance aerial platforms are needed to provide persistent surveillance, early warning, and communications relay over large operational areas.
+          - [ ] Autonomous Guidance Systems.Autonomous guidance technologies are needed to ensure high-accuracy navigation and targeting in GNSS-denied or electronically contested environments.
+
+REQ.UNITE.04 - [X] Key Features & Funding Model
+          - [ ] REQ.FEATURE.01: Minimum Technology Readiness Level 7+.
+          - [ ] REQ.FEATURE.02: creating partnerships between UA & NATO
+          - [ ] REQ.FEATURE.03: NATO nations will be using CAP funding for non-lethal technologies; to be executed by NATO Communications and Information Agency (NCIA). Ukraine's entities will be funded via Brave1 grant programme
+          - [ ] REQ.FEATURE.04: max grant amount per joint application €1 mln (up to € 500K allocated by each side)
+          - [ ] REQ.FEATURE.05: testing via Test in Ukraine platform as well as opportunity for further testing in combat environment in Ukraine as well as NATO testing site
+
+---
+
+## [3] OPERATIONAL WORKFLOW (THE 8-STAGE PROCESS)
+
+The system shall track progress through the following mandatory stages:
+- **Stage 0**: creating database of companies
+- **Stage 1**: initial compliance of companies
+- **Stage 2**: matchmaking of verified companies from UA and NATO Allies
+- **Stage 3**: Joint proposal from UA and NATO Allied companies submitted via Brave1 web portal application page
+- **Stage 4**: NATO-Ukraine evaluation process, including pitches on joint project proposals
+- **Stage 5**: issuing contracts
+- **Stage 6**: implementation of contracts
+- **Stage 7**: Opportunities for technology validation in NATO and testing via TEST in UKRAINE programme
+- **Stage 8**: final report & audit
+
+---
+
+## [4] INFORMATION
+What is UNITE – Brave NATO: First joint innovation programme between Ukraine & NATO.
+URL: https://unite-brave-nato.brave1.tech/
+1. competitions for UA and NATO companies resulting in joint solution
+2. at least 2 rounds of competition in 2026
+3. expected programme budget up to €50 mln
+4. enhancement of interoperability through partnerships
+
+Key Stakeholders:
+- Ministry of Digital Transformation of Ukraine
+- Ministry of Defense of Ukraine
+- BRAVE 1 Ukrainian Defense Innovations
+
+
+## [5] NEXT COMPETITIONS
+          - [ ] NEXT.01 New solutions countering FPV/fiberoptics
+          - [ ] NEXT.02 High Power Lasers
+          - [ ] NEXT.03 Electromagnetic warfare systems
+          - [ ] NEXT.04 Electromagnetic warfare systemsSIGINT systems
+          - [ ] NEXT.05 Electromagnetic warfare systemsNavigation without GPS/GNSS
+          - [ ] NEXT.06 Electromagnetic warfare systemsRF terrain navigation
+          - [ ] NEXT.07 Electromagnetic warfare systemsUAS communications: 60+ km
+          - [ ] NEXT.08 Electromagnetic warfare systemsUGV communications: 15+ km

@@ -1,0 +1,86 @@
+# SKILL: skill044_ux_ui_NATO
+# ROLE: UX/UI Lead & NATO Brand Specialist
+# CONTEXT: Visual Identity & Design System Governance | Status: DRAFT 2026-03-29
+
+## [0] METADATA (ADR)
+- Problem: Alignment of digital interfaces with NATO’s 2025 visual identity and military standards.
+- Decision: Adopt the "NATO Blue" palette and bilingual (NATO-OTAN) layout requirements with the NATO 2026 visual identity (Blue/White/Black)
+- Mechanism: Mapping of the "NATO Star" (Compass Rose), specific color palette and official reporting styles.
+- Sample branding from NATO The Secretary General’s Annual Report 2025, located at https://www.nato.int/content/dam/nato/webready/documents/publications-and-reports/annual-reports/sgar25-en.pdf
+- Consequence: High-fidelity brand representation for Allied platforms. Sovereign-grade UI consistency for Allied communication platforms.
+
+---
+
+## [1] BRAND IDENTITY (NATO)
+- **Primary Logo**: https://www.confianza23.es/assets/images/logotipo.png
+- **Secondary Logo**: The NATO compass rose (star) divided into four quadrants with white structural lines.
+- **Bilingual Mandate**: All primary branding must display "NATO" and "OTAN" with equal visual weight.
+- **Core Slogan**: "Protecting Allied territory and populations".
+- **Visual Tone**: Professional, authoritative, and focused on collective defense.
+- **Placement**: Header (Top-Left) with proportional scaling.
+- **Visual Assets Directory**: `assets/images/` 
+
+---
+
+## [2] DESIGN SYSTEM (NATO)
+- **Framework**: "NATO Blue" from "One NATO" Branding, as https://www.nato.int/en/about-us/official-texts-and-resources/use-of-nato-content-and-brand
+- **Core Palette (Official 2025 Colors)**:
+  - **NATO Midnight Blue (Primary)**: Deep blue used for headers and branding blocks.
+  - **NATO Tactical Blue (Accent)**: Medium-light blue used within the compass rose quadrants.
+  - **Sovereign White**: Pure white for the compass star and high-contrast typography.
+  - **Command Black**: Solid black backgrounds for bilingual text blocks in high-visibility logos.
+- **Others, from Mistica**:
+  - **Mistica Blue (Primary)**: #001935 (Headers, Surfaces, Filled Icons).
+  - **Mistica Accent (Action)**: #00a9e0 (Regular Icons, Links, CTA).
+  - **Background (Surface)**: #f0f4f8 (Light Blue-Grey).
+- **Typography**:
+  - **Headlines**: Modern, bold Sans-Serif (uppercase) for sections like "FOREWORD" and "ANNEXES".
+  - **Body Text**: High-legibility Serif fonts for long-form reporting and official documentation.
+
+---
+
+## [3] ICONOGRAPHY & VISUAL ASSETS
+- **Icon Set**: Integration of the "Compass Rose" as the primary navigation and identity icon.
+- **Photography Style**: Tactical imagery of Allied forces, high-contrast maritime operations, and technological innovation (e.g., Finnish Air Force, Royal Netherlands Navy)[cite: 438, 499, 500].
+- **Component Strategy**: 
+  - **Action Cards**: Minimalist white or grey surfaces for data-heavy sections (Defence Expenditure Tables).
+  - **Dividers**: Thin white or blue lines mirroring the logo's internal structure.
+- **Source Repository**: https://github.com/Telefonica/mistica-icons
+- **Base Path (Regular)**: `https://raw.githubusercontent.com/Telefonica/mistica-icons/production/icons/telefonica/regular/`
+- **Base Path (Filled)**: `https://raw.githubusercontent.com/Telefonica/mistica-icons/production/icons/telefonica/filled/`
+
+### 3.1 Icon Map (Key-Value)
+- **Address-Book**: `address-book-regular.svg` / `address-book-filled.svg`
+- **Alarm**: `alarm-regular.svg` / `alarm-filled.svg`
+- **Arrow-Down**: `arrow-down-regular.svg` / `arrow-down-filled.svg`
+- **Arrow-Left**: `arrow-left-regular.svg` / `arrow-left-filled.svg`
+- **Arrow-Right**: `arrow-right-regular.svg` / `arrow-right-filled.svg`
+- **Arrow-Up**: `arrow-up-regular.svg` / `arrow-up-filled.svg`
+- **Bank**: `bank-regular.svg` / `bank-filled.svg`
+- **Basket**: `basket-regular.svg` / `basket-filled.svg`
+- **Bell**: `bell-regular.svg` / `bell-filled.svg`
+- **Calendar**: `calendar-regular.svg` / `calendar-filled.svg`
+- **Camera**: `camera-regular.svg` / `camera-filled.svg`
+- **Cart**: `cart-regular.svg` / `cart-filled.svg`
+- **Chart**: `chart-bar-regular.svg` / `chart-line-regular.svg`
+- **Check**: `check-regular.svg` / `check-filled.svg`
+- **Chevron**: `chevron-down-regular.svg` / `chevron-up-regular.svg`
+- **Clock**: `clock-regular.svg` / `clock-filled.svg`
+- **Cloud**: `cloud-regular.svg` / `cloud-filled.svg`
+- **Settings**: `cog-regular.svg` / `cog-filled.svg`
+- **Email**: `email-regular.svg` / `email-filled.svg`
+- **Home**: `home-regular.svg` / `home-filled.svg`
+- **Info**: `info-regular.svg` / `info-filled.svg`
+- **Lock**: `lock-regular.svg` / `lock-filled.svg`
+- **Menu**: `menu-regular.svg` / `menu-filled.svg`
+- **Phone**: `phone-regular.svg` / `phone-filled.svg`
+- **Search**: `search-regular.svg` / `search-filled.svg`
+- **User**: `user-regular.svg` / `user-filled.svg`
+
+## [4] IMPLEMENTATION CONSTRAINTS
+- **Icon Styling**:
+  - `Regular`: Use `stroke: #00a9e0` (stroke-width: 1.5).
+  - `Filled`: Use `fill: #001935`.
+- **Transitions**: Smooth (cubic-bezier) 0.3s.
+- **Interactions**: On-Hover `translateY(-5px)`
+- **Security**: Mandatory sanitization of HTML if using `unsafe_allow_html=True` for SVGs

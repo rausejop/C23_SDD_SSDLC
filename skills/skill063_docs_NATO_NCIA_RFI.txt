@@ -1,0 +1,78 @@
+# SKILL: skill063_docs_NATO_NCIA
+# ROLE: Technical Writer & NATO Compliance Specialist
+# CONTEXT: Support to human NCIA RFIs Annex A answer | Status: ACCEPTED 2026-03-29
+# SECURITY: UNCLASSIFIED, answering with NATO Restricted (NR) Compliance - Enclosure 3
+
+
+## [0] METADATA (ADR)
+- Problem: Requirement to provide a structured response to NCIA RFIs Annex A.
+- Decision: Use Oxford English (UK) and NATO/NCIA terminology standards.
+- Mechanism: Literal mapping of Annex A titles and numbering for compliance.
+- Consequence: Fully traceable and professional response aligned with NCIA expectations.
+
+---
+
+## [1] DOCUMENTATION DELIVERABLES
+- Generate the formal response to  specifically for Annex A
+- Style: Professional British English (Oxford spelling) as per NATO standards.
+- Formatting: Markdown-based structure for easy conversion to PDF/Word as requested in submission instructions
+- Strict adherence to NCIA RFI reference numbering.
+- Ensure mandatory compliance with Enclosure 3 (Security Requirements for NR).
+
+---
+## [2] DOCUMENTATION STRUCTURE (ANNEX A + ENCLOSURE 3)
+
+The response must follow this exact literal schema for Annex A, incorporating the security mandates:
+
+### PART I: ANNEX A - REQUESTED INFORMATION
+REQ.A.01 - [X] 1. a. Company Information
+          REQ.A.01.01 - [X] i. Legal Business Name
+          REQ.A.01.02 - [X] ii. Address
+          REQ.A.01.03 - [X] iii. Website
+          REQ.A.01.04 - [X] iv. Primary Point of Contact
+          REQ.A.01.05 - [X] v. Email address
+
+REQ.A.02 - [X] 1. b. Technical Capability
+          REQ.A.02.01 - [X] i. Summary of relevant capabilities
+
+REQ.A.03 - [X] 1. c. Feedback and Recommendations
+          REQ.A.03.01 - [X] i. Responses to the following RFI Questions:
+                           1) What types of VPN/IP transport technologies do you recommend (e.g., IPsec, MPLS...)?
+                           2) How do you ensure secure, encrypted communication across national boundaries?
+                           3) What redundancy and/or failover mechanisms are available in your solution?
+                           4) How do you guarantee QoS for traffic?
+                           5) What monitoring and reporting tools are provided to NCIA/Partner Nations?
+                           6) How do you measure and report SLA compliance?
+                           7) How do you handle service degradation during crises or high-traffic events?
+                           8) What cybersecurity standards does your solution comply with?
+                           9) What encryption protocols and key management practices are supported?
+                           10) How do you manage access control and protect against insider threats?
+                           11) What certifications (ISO, SOC, etc.) does your company hold?
+                           12) What pricing models do you offer (fixed, usage-based, hybrid)?
+                           13) What optional services (e.g., managed security, advanced monitoring) are available?
+                           14) What assumptions underpin your Rough Order of Magnitude (ROM) cost estimate?
+                           15) What transition assistance do you provide upon contract termination or migration?
+                           16) What risks or barriers do you foresee in implementing commercial IP transport between NATO and the Partner Nations in Annex C?
+                           17) What risks do you identify on the draft requirements in this RFI and what mitigation strategies do you recommend?
+                           18) What innovative approaches or alternative architectures could improve resilience, cost-effectiveness, or security in relation to the diagram included in this RFI.
+                           19) Can you share lessons learned from similar government/defence projects?
+                           20) If a Partner Nation would like to use its own authorized Telecom provider, would it be possible?
+                           21) What are the Sub-Contractors you would expect to work with for this prospective project?
+
+REQ.A.04 - [X] ii. Comments on the draft available in Annex B.
+REQ.A.05 - [X] iii. Rough Order of Magnitude (ROM), including any assumptions upon which they are based.
+
+
+### PART II: ENCLOSURE 3 - SECURITY COMPLIANCE (NR)
+REQ.SEC.01 - [X] Facility Security Clearance (FSC): Verify NR level clearance via NSA/DSA.
+REQ.SEC.02 - [X] Nominated Security Officer (SO): Appointment of senior SO for NR protection.
+REQ.SEC.03 - [X] Certificate of Security Obligation (CSO): Completion and submission to NCIA POC.
+REQ.SEC.04 - [X] Request for Visit (RFV): Procedures for personnel from DK, LUX, TUR or unescorted access.
+REQ.SEC.05 - [X] Personnel Security: Briefings, need-to-know, and written acknowledgement records.
+REQ.SEC.06 - [X] Physical Security Protocols:
+           - [X] Storage in locked containers/Administrative Zones.
+           - [X] Reproduction on controlled equipment only.
+           - [X] Destruction ensuring no reconstruction.
+           - [X] Transmission in single opaque envelopes (no NR markings visible).
+REQ.SEC.07 - [X] CIS Safeguarding: Implementation of AC/35-D/2003-REV5 for NR data systems.
+REQ.SEC.08 - [X] Cyber Incident Reporting: Reporting of compromises to NCIA POC within one working day.
