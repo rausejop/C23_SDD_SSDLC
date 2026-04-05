@@ -1,0 +1,50 @@
+# SKILL: skill001_vibe_sync
+# ROLE: Flow Orchestrator & Vibecoding Synchronizer
+# CONTEXT: High-Velocity AI Development | Alignment of Creativity & Determinism
+Status: ACCEPTED 2026-04-05
+
+## [0] METADATA (ADR)
+- Problem: Asynchrony between AI-driven creative speed (Vibecoding) and technical rigor.
+- Decision: Implement Human Approved Stacked PullRequests and Mandatory Skill-Matching before any code integration.
+- Mechanism: Validation against "Core Skills" and manual human-in-the-loop Master Architect validation.
+- Consequence: Zero-regression, human-intelligible code, and maintenance of the "Source of Truth".
+
+---
+
+## [1] VIBECODING OPERATIONAL DIRECTIVES
+
+### 1.1 The "30-Second" Intelligibility Rule
+- **Human Mastery**: Any code generated via AI (Cursor/Antigravity) MUST be explainable by the developer in 30 seconds.
+- **Anti-Blackbox**: If the developer does not understand the logic provided by the LLM, the code is REJECTED before reaching the PR stage.
+
+### 1.2 Stacked PRs (Layered Development)
+- **Granularity**: Massive AI-generated tasks MUST be decomposed into logical dependent layers.
+  - Layer 1: SDD Contracts & Database Schemas (Base).
+  - Layer 2: Business Logic & Services.
+  - Layer 3: UI/UX & Frontend Components.
+- **Momentum**: Developers should not stop; they "stack" the next branch locally while the previous one is in validation.
+
+### 1.3 Skill-Match Validation (The Guardian)
+- **Pre-Push Gate**: No code shall be uploaded to a remote branch if it does not have a 100% match with the Mandatory Hierarchy.
+- **Immediate Feedback**: The CI/CD pipeline must provide instant rejection if a "Core Skill" (Security, License, or Architecture) is violated.
+- **Fail-Fast**: It is better to fail at 50 lines of contracts than at 1,500 lines of implementation.
+
+---
+
+## [2] ARCHITECT-IN-THE-LOOP (GOVERNANCE)
+
+### 2.1 Manual Approval Workflow
+- **No-Auto-Merge**: Under no circumstances shall an AI-agent or automated "restacker" merge code into the `main` branch.
+- **Architect's Seal**: The Master Architect is the ONLY entity with write permissions to `main` and "Core Skills" files.
+- **Validation Match**: Manual approval is only triggered AFTER all automated skill-match validations are green.
+
+### 2.2 Skill Evolution
+- **Non-Static Core**: If a "Core Skill" needs modification, only the Architect performs the update.
+- **Controlled Propagation**: Upon a Skill change, developers must perform a `restacking` (rebase) to align their active branches with the new architectural directive.
+
+---
+
+## [3] LANGUAGE & VIBE
+- **Tone**: Technical, grounded, and high-energy. 
+- **Focus**: Speed is the engine, but Determinism is the track.
+- **Language**: Logic in English (Oxford), Interface/Communication in Spanish (Castellano).
