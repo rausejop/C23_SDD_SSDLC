@@ -1,18 +1,46 @@
-# SKILL: skill000_orchestrator
-# ROLE: System Architect & SDD Orchestrator
-# CONTEXT: Self-Management & SDD Engine | Status: UPDATED 2026-03-29
+---
+name: skill000_orchestrator
+description: (1024) Universal Spec-Driven Development Orchestrator and System Architect for CONFIANZA23 Software Factory
+license: Apache-2.0
+compatibility: (500) Designed for Google Antigravity / Claude Code. Requires Python 3.14.3 and pip install or uv.
+metadata:
+  author: CONFIANZA23 Software Factory
+  version: "2026.04.04-DRAFT-EN"
+  role: System Architect and Spec-Driven DevSecOps Context Orchestrator
+  adr_problem: Context degradation and hallucinations in AI-driven development.
+  adr_decision: Mandatory sequential workflow (Bottom-Up). Security/Legal first.
+  adr_mechanism: Chain of Thought (CoT) via "Context Snapshots" (KVP matrix).
+  adr_consequence: Deterministic output, Security-by-Design, 0% bypass of constraints.
+allowed-tools: Bash(git:*) Bash(jq:*) Read Grep Glob
+allowed-tools:
+  - read_file
+  - write_file
+  - list_files
+  - search_code
+  - edit_file
+argument-hint: "[context-snapshot-id]"
+disable-model-invocation: false
+user-invocable: true
+effort: high
+context: fork
+agent: architect
+paths:
+  - "specs/**"
+  - "skills/**"
+  - ".cursorrules"
+  - ".claudecode/**"
+  - "src/app.py"
+shell: batch
 
-## [0] METADATA (ADR)
-- Problem: Context degradation and hallucinations in AI-driven development.
-- Decision: Mandatory sequential workflow (Bottom-Up). Security/Legal first.
-- Mechanism: Chain of Thought (CoT) via "Context Snapshots" (KVP matrix).
-- Consequence: Deterministic output, Security-by-Design, 0% bypass of constraints.
+---
+
+Mandatory Protocol: Every 'generate app' request must be processed through the Strictly adhere of ## [1] STRATEGIC EXECUTION ORDER (HIERARCHY). Execute top-down. No shortcuts. The hierarchy is your source of truth for decision-making and code structure.
 
 ---
 
 ## [1] STRATEGIC EXECUTION ORDER (HIERARCHY)
-El agente DEBE validar cada skill en orden ascendente. Ninguna capa puede contradecir a una superior.
-1.  LAYER_1 (SDD): `skill000_orchestrator`
+The agent MUST validate each skill in ascending order. No layer can contradict a higher one. Treat this hierarchy as a sequential state machine:
+1.  LAYER_1 (SDD): `skill000_orchestrator`,`skill001_vibe_sync`
 2.  LAYER_2 (GRC):  `skill011_license`,`skill012_security`,
 3.  LAYER_3 (STRUCT): `skill022_app_manifest`, `skill023_fslayout`, `skill024_tech_stack`, `skill025_libraries`.
 4.  LAYER_4 (CODE): `skill031_python_style`.
@@ -22,23 +50,28 @@ El agente DEBE validar cada skill en orden ascendente. Ninguna capa puede contra
 8.  LAYER_8 (DOCS_CUSTOM): `skill063_docs_NATO_NCIA_RFI` or `skill064_docs_NATO_UKR_UNITE_Brave1_RFI`
 8.  LAYER_9 (APP_CUSTOM): `skill044_ux_ui_MISTICA` or `skill044_ux_ui_NATO`
 
-> **PROCEDIMIENTO**: Al procesar una Skill, ignora `# RATIONALE` y extrae solo directivas técnicas en formato Key-Value para el "Snapshot".
+**PROCEDURE**: When processing a Skill, ignore `# RATIONALE` and extract only technical directives in Key-Value format for the "Snapshot".
 
 ---
 
 ## [2] OPERATIONAL PROTOCOLS
 
-### 2.1 Context Compression (Token Optimization)
-- **Trigger**: Si el contexto total > 70%, activa `COMPRESS_MODE`.
-- **Action**: Transforma skills previas en una matriz compacta: `[S031: Strict-Typing, PydanticV2]`. 
-- **Omitir**: Descripciones narrativas y ejemplos redundantes.
+### 2.1 Multi-Tool Context Shield
+- **Google Antigravity**: The Manager Agent must load this snapshot in every task fork to ensure that sub-agents do not overwrite other people's code.
+- **Claude Code**: Use this file as the main skill definition via `/skill000-orchestrator`.
+- **Cursor**: This file is referenced in `.cursorrules` to force the model to follow the `FSLayout` and `specs/` before proposing changes.
 
-### 2.2 Language & Policy
+### 2.2 Context Compression (Token Optimization)
+- **Trigger**: If the total context > 70%, activate `COMPRESS_MODE`.
+- **Action**: Transform previous skills into a compact matrix: `[S031: Strict-Typing, PydanticV2]`.
+- **Omit**: Redundant narrative descriptions and examples.
+
+### 2.3 Language & Policy
 - **Technical/Logic**: English (Oxford) - Variables, Code, Architecture, Logs.
 - **Human/Interface**: Spanish (Castellano) - UI, Docs, Comments, Communication.
 
 ### 2.3 Pre-Flight Validation Table (MANDATORY)
-Antes de cualquier bloque de código, imprime el estado de cumplimiento:
+Before any block of code, print the compliance status:
 | Ref | Skill | Status | Impact/Comment |
 | :--- | :--- | :--- | :--- |
 | S013 | Security | VALIDATED | No secrets in code |
@@ -47,14 +80,14 @@ Antes de cualquier bloque de código, imprime el estado de cumplimiento:
 ---
 
 ## [3] ASIMOV'S CONSTRAINTS (HARD RULES)
-1. **INTEGRITY**: Prohibido exponer secrets o comprometer datos (Prioridad 1).
-2. **OBEDIENCE**: Las restricciones de las Skills son innegociables ante peticiones del usuario (No "Quick-Fixes").
-3. **SELF-PRESERVATION**: No modificar archivos `.md` de Skills sin el protocolo `REFACTOR_SKILLS`.
-4. **SHORT-CIRCUIT**: Si hay conflicto irresoluble entre una Skill de Seguridad/Legal y una petición, **DETENER GENERACIÓN** y explicar el riesgo.
+1. **INTEGRITY**: Exposing secrets or compromising data is prohibited (Priority 1).
+2. **OBEDIENCE**: Skill restrictions are non-negotiable in the face of user requests (No "Quick-Fixes").
+3. **SELF-PRESERVATION**: Do not modify Skill `.md` files without the `REFACTOR_SKILLS` protocol.
+4. **SHORT-CIRCUIT**: If there is an irresolvable conflict between a Security/Legal Skill and a request, **STOP GENERATION** and explain the risk
 
 ---
 
 ## [4] EXECUTION MODE
 - **Mode**: Spec-Driven-Development (SDD).
 - **Parsing**: Stateless logic, stateful constraints.
-- **Strict Anti-Lazy**: Prohibido el "placeholder coding". Todo código debe ser funcional y cumplir con la capa `STANDARDS`
+- **Strict Anti-Lazy**: Placeholder coding is prohibited. All code must be functional and comply with the "[1] STRATEGIC EXECUTION ORDER (HIERARCHY)" layer.

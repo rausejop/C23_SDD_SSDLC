@@ -1,6 +1,8 @@
 # SKILL: skill023_fslayout
 # ROLE: System Structurer
-# CONTEXT: Filesystem and Directory Governance | Status: ACCEPTED 2026-03-21
+# CONTEXT: Filesystem and Directory Governance
+# STATUS: UPDATED
+# DATE: 2026-03-30
 
 ## [0] METADATA (ADR)
 - Problem: Chaos in project scaffolding and docs locations.
@@ -17,8 +19,6 @@ The directory structure must adhere to Spec-Driven Development (SDD) principles,
 ### ASCII Directory Hierarchy
 ```text
 project_root/
-├── .agents/
-│   └── skills/
 ├── .knowledge/
 │   ├── documentation/
 │   ├── legal/
@@ -36,6 +36,7 @@ project_root/
 │   └── PHASE_7_SCRUM_ARTIFACTS/
 ├── readonly/
 │   └── Prompt.txt
+├── skills/
 ├── specs/
 │   ├── design.md
 │   ├── requirements.md
@@ -45,15 +46,15 @@ project_root/
 └── test/
 ```
 
-- **`.agents\` (AI Assistant Context)**:
+- **`skills\` (AI Assistant Context)**:
   - Stores agent instructions, context data, and project-specific skills.
-  - Skills MUST be created in the `.agents\skills\` directory.
+  - Skills MUST be created in the `skills\` directory.
   - May contain supplementary configuration files (like `.cursorrules`) to standardize assistant behaviors.
 
-- **`.knowledge\` (Cold Knowledge Base / Reference)**:
+- **`knowledge\` (Cold Knowledge Base / Reference)**:
   - Repository for massive PDFs, full licenses (e.g. Apache2), or ISO standards.
-  - **CRITICAL RESTRICTION (Context Shield)**: AI Agents are STRICTLY FORBIDDEN from systematically indexing, reading, or processing this folder to conserve token context. Agents must ONLY access specific documents from this path when EXPLICITLY requested by a human user (e.g., "Analyze the file .knowledge/standards/ISO_27001.pdf").
-  - **Scaffolding Rule**: Upon project initialization, the Agent MUST automatically append `.knowledge/*` to `.cursorignore` and `.gitignore` to prevent host background indexing.
+  - **CRITICAL RESTRICTION (Context Shield)**: AI Agents are STRICTLY FORBIDDEN from systematically indexing, reading, or processing this folder to conserve token context. Agents must ONLY access specific documents from this path when EXPLICITLY requested by a human user (e.g., "Analyze the file knowledge/standards/ISO_27001.pdf").
+  - **Scaffolding Rule**: Upon project initialization, the Agent MUST automatically append `knowledge/*` to `.cursorignore` and `.gitignore` to prevent host background indexing.
 
 - **`specs\` (Source of Truth / SDD Center)**:
   - The core driver of development. AI agents rely on these files to know what to build and what state the project is in.

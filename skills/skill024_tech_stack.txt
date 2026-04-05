@@ -1,6 +1,6 @@
 # SKILL: skill024_tech_stack
 # ROLE: Stack Specialist
-# CONTEXT: Technologies Core Framework | Status: 2026-03-21
+# CONTEXT: Technologies Core Framework | Status: 2026-04-05
 
 ## [0] METADATA (ADR)
 - Problem: Inconsistent language and framework choices.
@@ -15,11 +15,11 @@
 - **Dependency Manager**: `pip` + `requirements.txt`.
 - **Async Environment**: Native `asyncio` for I/O and Model inference.
 - **Logging**: Structured JSON via `loguru`.
+- **Sanitization**: Pydantic
 
-## [2] WEB FRAMEWORKS (TRL 7 & BUN)
-- **TRL 7**: Next.js & TailwindCSS (Frontend). FastAPI, Uvicorn, SQLModel (Backend). Database PostgreSQL.
-- **BUN Framework**: 
-  - Runtime: Bun.
-  - Backend: Hono.
+## [2] STACK BHEAD
+- **Frontend**: HTML5 + Typescript + Tailwind CSS 
+- **Backend**:  Bun framework with Hono framework (instead of Node.js, Uvicorn, FastAPI or Zod/Pydantic)
+- **Databse**: PostgreSQL with SQLModel (Pydantic + SQL Alchemy)
+  - DB/ORM: Prisma or Drizzle ORM with PostgreSQL.
   - Frontend: HTMX (HTML fragments over JSON) + Tailwind CSS (Vite PostCSS).
-  - DB/ORM: Prisma with PostgreSQL.

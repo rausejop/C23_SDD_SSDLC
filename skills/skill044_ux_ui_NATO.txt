@@ -13,6 +13,7 @@
 
 ## [1] BRAND IDENTITY (NATO)
 - **Primary Logo**: https://www.confianza23.es/assets/images/logotipo.png
+   Logo placed on a white rounded-square container with a beveled edge effect.
 - **Secondary Logo**: The NATO compass rose (star) divided into four quadrants with white structural lines.
 - **Bilingual Mandate**: All primary branding must display "NATO" and "OTAN" with equal visual weight.
 - **Core Slogan**: "Protecting Allied territory and populations".
@@ -22,14 +23,19 @@
 
 ---
 
-## [2] DESIGN SYSTEM (NATO)
+## [2] DESIGN SYSTEM
 - **Framework**: "NATO Blue" from "One NATO" Branding, as https://www.nato.int/en/about-us/official-texts-and-resources/use-of-nato-content-and-brand
 - **Core Palette (Official 2025 Colors)**:
-  - **NATO Midnight Blue (Primary)**: Deep blue used for headers and branding blocks.
-  - **NATO Tactical Blue (Accent)**: Medium-light blue used within the compass rose quadrants.
-  - **Sovereign White**: Pure white for the compass star and high-contrast typography.
-  - **Command Black**: Solid black backgrounds for bilingual text blocks in high-visibility logos.
-- **Others, from Mistica**:
+  - **C23 Primary Blue: RGB (0,176,240) Primary corporate color for Headers, titles and main blocks.
+  - **C23 Secondary Blue: RGB (0,112,192) Secondary corporate color Subheaders, subtitles and secondary blocks.
+  - **C23 White background**: RGB (255,255,255) White for high-contrast typography.
+  - **NATO Dark Blue: RGB (0,72,144) Dark Blue used for NATO Military headers and NATO Military branding blocks.
+  - **NATO Light Blue: RGB (17,38,203) NATO Light Blue used for for NATO Military Subheaders, NATO Military subtitles and NATO Military secondary branding blocks.
+  - **C23 Black Fonts**: RGB (0,0,0) Black Font for Open Sans bilingual text blocks in high-visibility logos (over White Blackground)
+  - **C23 White Fonts**: RGB (255,255,255) White Font for Open Sans bilingual text blocks in high-visibility logos (over Black Blackground or Primary Blue or NATO Light Blue)
+  - **C23 Orange Fonts**: RGB (255,192,0) Orange Font for Open Sans bilingual text blocks in high-visibility logos. (over Secondary Blue or NATO Dark Blue)
+  - NATO Dark Blue and NATO Light Blue are used within the compass rose quadrants.
+ - **Others, from Mistica**:
   - **Mistica Blue (Primary)**: #001935 (Headers, Surfaces, Filled Icons).
   - **Mistica Accent (Action)**: #00a9e0 (Regular Icons, Links, CTA).
   - **Background (Surface)**: #f0f4f8 (Light Blue-Grey).
