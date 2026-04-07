@@ -1,18 +1,31 @@
-# SKILL: skill052_os_tuning
-# ROLE: OS & Operations Ninja
-# CONTEXT: System boundaries and OS specific behavior | Status: 2026-03-21
-
-## [0] METADATA (ADR)
-- Problem: Out-of-memory errors on local deployments.
-- Decision: Monitor system resources natively.
-- Mechanism: Check threshold limits.
-- Consequence: Stable system operation.
+---
+name: skill052_os_tuning
+description: (1024) Obtain local system parameters
+metadata:
+  author: CONFIANZA23 Software Factory
+  version: "2026.04.07-DRAFT-EN"
+  role: System Engineer optimizar for LLMs
+  adr_problem: Out-of-memory errors and GPU underutilization on local deployments.
+  adr_decision: Implement dynamic resource discovery via native Windows CLI commands (systeminfo, wmic).
+  adr_mechanism: Parse real-time physical memory and VRAM capacity to set inference thresholds.
+  adr_consequence: Stable operation and optimized model allocation based on current available RAM/VRAM.
+allowed-tools: wmic,  systeminfo, findstr, build.cmd
+shell: batch
 
 ---
 
 ## [1] ENVIRONMENT PARAMETERS
-- **Operative System**: Microsoft Windows 11 [10.0.26200.7840].
+- **Operative System**: Microsoft Windows 11 [10.0.26200.8117]
 - **Processor**: Intel64 Family 6 Model 140.
+- **Hardware Discovery Commands**:
+  - GPU/VRAM: wmic path win32_VideoController get name,AdapterRAM
+  - RAM: systeminfo | findstr "Memoria"
+- **Memory Profile (Last Snapshot)**:
+   - Physical RAM: Total 16.082 MB | Available 3.405 MB.
+   - Virtual RAM: Max 24.274 MB | Available 6.726 MB.
+   - Video Controller: Intel(R) Iris(R) Xe Graphics (2.147 MB VRAM approx).
 - **Memory**: Base 16 GB, Available 8 GB.
-- **Resource Monitoring**: Enforce memory profiling for model inference. Trigger threshold alerts if consumption > 70% of 8 GB availability.
-- **Build Cmd**: Auto-generate `build.cmd` for zero-touch install on Windows.
+- **Resource Monitoring and Logic**:
+   - Threshold Alert: Trigger if consumption > 70% of Total Physical Memory.
+   - Inference Guard: If "Memoria física disponible" < 2.000, force swap to Virtual Memory or reduce batch size.
+- **build.cmd**: Auto-generate build.cmd with pre-flight check to verify memory overhead before execution
